@@ -11,6 +11,7 @@ services:
       - circuloos-orion
       - circuloos-timescale-db
     environment:
+      - JAVA_TOOL_OPTIONS=-XX:-UseContainerSupport
       - MICRONAUT_SERVER_PORT=${MINTAKA_PORT}
       - DATASOURCES_DEFAULT_HOST=circuloos-timescale-db
       - DATASOURCES_DEFAULT_USERNAME=${ORIONLD_TROE_USER}
